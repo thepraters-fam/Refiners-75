@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111214">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Refiner 75">
+<meta name="description" content="A Christ-centered 75-day discipline challenge.">
+<link rel="manifest" href="manifest.json">
+<title>REFINER 75 — Daily Discipline</title>
+<style>
+:root{--bg:#111214;--panel:#1a1c20;--panel2:#22252a;--line:#34373e;--text:#f4f4f2;--muted:#a6a8af;--flame:#ff6a35;--flame2:#ff9c43;--good:#91d7a0;--radius:18px}
+*{box-sizing:border-box}html{background:var(--bg);color-scheme:dark}body{margin:0;background:radial-gradient(ellipse at top right,#2a1a15 0,transparent 36%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+button,input,textarea,select{font:inherit}button{cursor:pointer}
+.wrap{max-width:760px;margin:auto;padding:20px 16px 24px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:10px}.mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(145deg,var(--flame2),#e64022);display:grid;place-items:center;font-size:23px;box-shadow:0 6px 24px #ff6a352e}.eyebrow{font-size:11px;letter-spacing:.2em;color:var(--flame2);font-weight:800}.brandname{font-weight:900;letter-spacing:.07em;font-size:17px}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 10px;color:var(--muted);font-size:12px;background:#ffffff05}
+h1{font-size:clamp(30px,8vw,42px);line-height:1.02;letter-spacing:-.04em;margin:8px 0 10px}h2{font-size:21px;margin:0 0 14px;letter-spacing:-.02em}h3{font-size:16px;margin:0 0 6px}.muted{color:var(--muted)}.small{font-size:12px}.hero{background:linear-gradient(135deg,#29201d,#1a1c20 64%);border:1px solid #5a3328;border-radius:24px;padding:22px;margin-bottom:16px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:1px solid #ff6a3528;right:-65px;top:-65px;box-shadow:0 0 0 20px #ff6a3508,0 0 0 40px #ff6a3505;pointer-events:none}.herohead{display:flex;align-items:center;justify-content:space-between;gap:12px}.daylabel{color:var(--flame2);font-weight:800;font-size:12px;letter-spacing:.12em}.progressrow{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-top:22px}.big{font-size:36px;font-weight:900;letter-spacing:-.05em}.track{height:7px;background:#ffffff13;border-radius:20px;overflow:hidden;margin-top:8px}.fill{height:100%;background:linear-gradient(90deg,var(--flame),var(--flame2));width:0%;transition:width .25s}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}.stat,.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px}.stat .number{font-size:25px;font-weight:850}.stat .label{font-size:12px;color:var(--muted);margin-top:3px}.card{margin:14px 0}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.tag{font-size:10px;letter-spacing:.12em;font-weight:800;color:var(--flame2);text-transform:uppercase}.verse{font-size:20px;font-weight:750;line-height:1.25;margin:8px 0}.ref{color:var(--flame2);font-weight:800;font-size:12px}.item{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-top:1px solid var(--line)}.item:first-child{border-top:0}.check{appearance:none;flex:0 0 23px;width:23px;height:23px;border:1.5px solid #62656e;border-radius:7px;background:#111214;margin:1px 0 0;display:grid;place-items:center}.check:checked{background:var(--flame);border-color:var(--flame)}.check:checked:after{content:"✓";font-size:15px;font-weight:900;color:#151515}.itemtitle{font-weight:750}.itemdesc{font-size:12px;color:var(--muted);margin-top:3px}.done .itemtitle{text-decoration:line-through;color:#a6a8af}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:11px 14px;font-weight:750}.btn.primary{background:linear-gradient(135deg,var(--flame),#e94c2d);border:0;color:#160d09}.btn.ghost{background:transparent}.btnrow{display:flex;gap:8px;flex-wrap:wrap}.btn.full{width:100%}textarea,input[type=date],input[type=text],input[type=password],select{width:100%;background:#101114;border:1px solid var(--line);border-radius:12px;color:var(--text);padding:12px;outline:none}textarea{min-height:105px;resize:vertical}label.field{display:block;font-size:12px;color:var(--muted);margin:13px 0 6px}.tabs{position:fixed;bottom:0;left:0;right:0;background:#141518f5;backdrop-filter:blur(18px);border-top:1px solid var(--line);padding:8px 6px calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center;z-index:5}.tabsinner{width:min(760px,100%);display:grid;grid-template-columns:repeat(5,1fr);gap:3px}.tab{background:transparent;border:0;color:#858891;border-radius:12px;padding:8px 2px;font-size:10px;font-weight:750;display:grid;gap:3px;justify-items:center}.tab .ico{font-size:19px}.tab.active{color:var(--flame2);background:#ff6a3514}.view{display:none}.view.active{display:block}.notice{border-left:3px solid var(--flame);padding:10px 12px;background:#ff6a350c;color:#d9d4d1;border-radius:0 10px 10px 0;font-size:13px}.phase{display:flex;gap:10px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}.phase:first-of-type{border-top:0}.phase-num{background:#ff6a3518;color:var(--flame2);border-radius:10px;padding:8px;font-weight:900;font-size:12px;min-width:48px;text-align:center}.empty{padding:20px;text-align:center;color:var(--muted)}.toast{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:#f4f4f2;color:#111;padding:10px 16px;border-radius:999px;font-size:13px;font-weight:800;display:none;z-index:10;box-shadow:0 8px 30px #0008}.danger{color:#ff9a85}.journalentry{white-space:pre-wrap;background:#111214;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:8px;font-size:13px}.hidden{display:none!important}
+@media(min-width:620px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.wrap{padding-top:28px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<div class="toast" id="toast"></div>
+<main class="wrap">
+<header class="top">
+ <div class="brand"><div class="mark">🔥</div><div><div class="eyebrow">75-DAY CHALLENGE</div><div class="brandname">REFINER <span style="color:var(--flame2)">75</span></div></div></div>
+ <button class="pill" id="settingsBtn">⚙ Setup</button>
+</header>
+
+<section class="view active" id="home">
+ <div class="hero">
+  <div class="herohead"><span class="daylabel" id="phaseLabel">THE FOUNDATION</span><span class="pill" id="dateLabel">DAY 1 / 75</span></div>
+  <h1 id="greeting">Become who<br>you were called to be.</h1>
+  <p class="muted" style="max-width:440px;margin:0">Faithfulness over perfection. Discipline rooted in grace. One day at a time.</p>
+  <div class="progressrow"><div><div class="small muted">CHALLENGE PROGRESS</div><div class="big"><span id="dayNum">1</span><span class="muted" style="font-size:18px"> / 75</span></div></div><div style="text-align:right"><div class="big" id="percent">0%</div><div class="small muted">today complete</div></div></div>
+  <div class="track"><div class="fill" id="progressFill"></div></div>
+ </div>
+ <div class="grid">
+  <div class="stat"><div class="tag">Consistency</div><div class="number" id="daysDone">0</div><div class="label">days with progress</div></div>
+  <div class="stat"><div class="tag">Today</div><div class="number" id="score">0/7</div><div class="label">commitments complete</div></div>
+  <div class="stat"><div class="tag">Milestone</div><div class="number" id="nextMilestone">15</div><div class="label">days to next phase</div></div>
+  <div class="stat"><div class="tag">Journal</div><div class="number" id="journalCount">0</div><div class="label">entries saved</div></div>
+ </div>
+ <div class="card">
+  <div class="sectionhead"><div><div class="tag">Today's word</div><h2 style="margin-top:5px">Anchor your day</h2></div><span>✦</span></div>
+  <div class="verse" id="verseText">“Discipline yourself for the purpose of godliness.”</div><div class="ref" id="verseRef">1 Timothy 4:7–8</div>
+  <p class="muted small" id="versePrompt">What is one faithful step you can take in response to God's Word today?</p>
+  <button class="btn ghost" onclick="showTab('journal')">Reflect in journal →</button>
+ </div>
+ <div class="card">
+  <div class="sectionhead"><div><div class="tag">Do the work</div><h2 style="margin-top:5px">Daily commitments</h2></div><span class="pill" id="checkCount">0 of 7</span></div>
+  <div id="checklist"></div>
+  <div class="notice" style="margin-top:12px">Your standing with God rests on Christ, not a perfect streak. If you miss a commitment, receive grace and return to faithfulness.</div>
+ </div>
+ <div class="card">
+  <div class="sectionhead"><h2>Today's focus</h2><span class="tag" id="focusDay">DAY 1</span></div>
+  <h3 id="focusTitle">Start with faithfulness</h3><p class="muted" id="focusText">Keep the commitments small enough to repeat tomorrow. Build the foundation before increasing intensity.</p>
+ </div>
+</section>
+
+<section class="view" id="scripture">
+ <div class="tag">Word before the world</div><h1>Scripture plan</h1><p class="muted">A 75-day reading journey through Mark, Ephesians, Philippians, and 2 Timothy, with reflection prompts.</p>
+ <div class="card"><div class="sectionhead"><h2>Today's reading</h2><span class="pill" id="readingDay">Day 1</span></div><div class="verse" id="readingTitle">Mark 1</div><p id="readingPrompt" class="muted">Notice what Jesus says and does. What does this reveal about who He is?</p><div class="btnrow"><button class="btn primary" id="readingDone">✓ Mark reading complete</button><button class="btn" id="openBible">Open Bible online ↗</button></div><p class="small muted" style="margin-top:10px">Bible text opens on Bible Gateway. This app does not reproduce a copyrighted Bible translation.</p></div>
+ <div class="card"><div class="sectionhead"><h2>Challenge phases</h2></div><div id="phases"></div></div>
+</section>
+
+<section class="view" id="journal">
+ <div class="tag">Be still. Pay attention.</div><h1>Prayer & journal</h1><p class="muted">Bring your honest self before God. Entries are stored on this device.</p>
+ <div class="card">
+  <div class="sectionhead"><h2>Daily reflection</h2><span class="pill" id="journalDay">Day 1</span></div>
+  <div class="small muted" id="journalVerse">1 Timothy 4:7–8</div>
+  <label class="field" for="godTaught">What is God teaching me in Scripture?</label><textarea id="godTaught" placeholder="Write what you noticed..."></textarea>
+  <label class="field" for="apply">What is one step of obedience today?</label><textarea id="apply" placeholder="Make it specific and practical..."></textarea>
+  <label class="field" for="gratitude">What am I grateful for?</label><textarea id="gratitude" placeholder="Name the gifts you see..."></textarea>
+  <label class="field" for="prayer">Prayer / people to pray for</label><textarea id="prayer" placeholder="Write your prayer or prayer list..."></textarea>
+  <div class="btnrow" style="margin-top:12px"><button class="btn primary" id="saveJournal">Save today's entry</button><button class="btn" id="clearJournal">Clear form</button></div>
+ </div>
+ <div class="card"><div class="sectionhead"><h2>Past entries</h2><span class="pill" id="entriesLabel">0 saved</span></div><div id="entries"></div></div>
+</section>
+
+<section class="view" id="review">
+ <div class="tag">Examine. Learn. Reset.</div><h1>Weekly review</h1><p class="muted">A short, honest review that helps you continue with wisdom—not shame.</p>
+ <div class="card">
+  <div class="sectionhead"><h2>Review this week</h2><span class="pill" id="weekLabel">Week 1</span></div>
+  <div class="small muted" id="reviewRange">Days 1–7</div>
+  <label class="field" for="grace">Where did I see God's grace this week?</label><textarea id="grace" placeholder="Remember specific moments..."></textarea>
+  <label class="field" for="wins">What went well? What commitments were consistent?</label><textarea id="wins" placeholder="Celebrate real progress..."></textarea>
+  <label class="field" for="struggle">What distracted me or tripped me up?</label><textarea id="struggle" placeholder="Be honest without beating yourself up..."></textarea>
+  <label class="field" for="people">How did my family and community experience my faith?</label><textarea id="people" placeholder="Where can I love people more intentionally?"></textarea>
+  <label class="field" for="nextStep">One adjustment for next week</label><textarea id="nextStep" placeholder="Choose one concrete change..."></textarea>
+  <button class="btn primary full" id="saveReview" style="margin-top:12px">Save weekly review</button>
+ </div>
+ <div class="card"><h2>Past reviews</h2><div id="pastReviews"></div></div>
+</section>
+
+<section class="view" id="settings">
+ <div class="tag">Make it yours</div><h1>Challenge setup</h1><p class="muted">Choose your start date and manage your personal data.</p>
+ <div class="card">
+  <label class="field" for="startDate">Challenge start date</label><input type="date" id="startDate">
+  <p class="small muted">Day count follows the calendar from your start date. You can change it if you need to reset your plan.</p>
+  <label class="field" for="displayName">Name or short greeting (optional)</label><input type="text" id="displayName" placeholder="e.g. Jon">
+  <button class="btn primary full" id="saveSettings" style="margin-top:12px">Save setup</button>
+ </div>
+ <div class="card"><h2>Your data</h2><p class="muted small">Your entries and checkmarks are saved locally in this browser. They are not uploaded to a server. Export a backup regularly, especially before changing devices or clearing Safari data.</p><div class="btnrow"><button class="btn" id="exportData">Export backup</button><button class="btn" id="importBtn">Import backup</button><input type="file" id="importFile" accept="application/json" class="hidden"></div><button class="btn ghost danger" id="resetBtn" style="margin-top:12px">Reset all app data</button></div>
+ <div class="card"><h2>Challenge phases</h2>
+  <div class="phase"><div class="phase-num">01–15</div><div><h3>Foundation</h3><div class="muted small">Establish daily habits and learn consistency.</div></div></div>
+  <div class="phase"><div class="phase-num">16–30</div><div><h3>Abiding in Christ</h3><div class="muted small">Deepen prayer, Scripture, and attention.</div></div></div>
+  <div class="phase"><div class="phase-num">31–45</div><div><h3>Self-control</h3><div class="muted small">Practice wise limits and physical stewardship.</div></div></div>
+  <div class="phase"><div class="phase-num">46–60</div><div><h3>Kingdom impact</h3><div class="muted small">Invest in family, church, and neighbors.</div></div></div>
+  <div class="phase"><div class="phase-num">61–75</div><div><h3>Perseverance</h3><div class="muted small">Build a sustainable rule of life.</div></div></div>
+ </div>
+ <div class="notice">This is a personal-use prototype, not a secure cloud service. Anyone with access to this browser profile may be able to see local data.</div>
+</section>
+</main>
+<nav class="tabs"><div class="tabsinner">
+ <button class="tab active" data-tab="home"><span class="ico">◈</span>Today</button>
+ <button class="tab" data-tab="scripture"><span class="ico">▤</span>Scripture</button>
+ <button class="tab" data-tab="journal"><span class="ico">✎</span>Journal</button>
+ <button class="tab" data-tab="review"><span class="ico">↗</span>Review</button>
+ <button class="tab" data-tab="settings"><span class="ico">⚙</span>Setup</button>
+</div></nav>
+<script>
+const KEY='refiner75_v1';
+const commitments=[
+ ['Meet with God','Read Scripture for 15–20 minutes and pray for 10–15 minutes.','Psalm 1:1–3'],
+ ['Journal','Write what God is teaching you, one application, and one prayer.','James 1:22'],
+ ['Move your body','Complete 20–30 minutes of comfortable, appropriate movement.','1 Corinthians 6:19–20'],
+ ['Practice stewardship','Follow your planned meals and make intentional food choices.','1 Corinthians 10:31'],
+ ['Guard your attention','Avoid deliberately impure content and mindless scrolling that crowds out your priorities.','Psalm 101:3'],
+ ['Invest in people','Intentionally encourage, serve, or connect with someone.','Galatians 6:10'],
+ ['Review your day','Reflect, check tomorrow’s priorities, and ask God for help.','Psalm 139:23–24']
+];
+const verses=[
+ ['“Discipline yourself for the purpose of godliness.”','1 Timothy 4:7–8','What is one faithful step you can take in response to God’s Word today?'],
+ ['“Be still, and know that I am God.”','Psalm 46:10','Where do you need to slow down and trust God today?'],
+ ['“Abide in me, and I in you.”','John 15:4','What would it look like to depend on Christ in your next responsibility?'],
+ ['“Let us not grow weary of doing good.”','Galatians 6:9','Where are you tempted to quit before the fruit appears?'],
+ ['“Be doers of the word, and not hearers only.”','James 1:22','What truth needs to become a concrete action today?'],
+ ['“Whatever you do, work heartily, as for the Lord.”','Colossians 3:23','How can ordinary work become an act of worship?'],
+ ['“He must increase, but I must decrease.”','John 3:30','What desire or distraction needs to become smaller today?'],
+ ['“Run with endurance the race that is set before us.”','Hebrews 12:1','What is one burden you can lay aside?'],
+ ['“Walk by the Spirit.”','Galatians 5:16','What choice today would reflect the Spirit’s fruit?'],
+ ['“Be steadfast, immovable, always abounding in the work of the Lord.”','1 Corinthians 15:58','How does the resurrection give meaning to faithful work?']
+];
+const readings=[
+ ['Mark 1','Notice how Jesus begins His public ministry. What do His words and actions reveal about His authority?'],
+ ['Mark 2','Watch how Jesus responds to need, sin, and criticism. What surprises you?'],
+ ['Mark 3','What does Jesus prioritize when crowds and conflict surround Him?'],
+ ['Mark 4','What kind of soil describes your response to God’s Word lately?'],
+ ['Mark 5','Where do you see Jesus’ authority and compassion?'],
+ ['Mark 6','What do the disciples need to learn about dependence on Jesus?'],
+ ['Mark 7','What is the difference between outward religion and a heart devoted to God?'],
+ ['Mark 8','What does it mean to deny yourself and follow Jesus?'],
+ ['Mark 9','Where do you need to pray, “I believe; help my unbelief”?'],
+ ['Mark 10','What does Jesus teach about greatness, service, and surrender?'],
+ ['Mark 11','What kind of fruit does Jesus look for in His people?'],
+ ['Mark 12','What does loving God with your whole life look like today?'],
+ ['Mark 13','How should hope in Christ shape faithful watchfulness?'],
+ ['Mark 14','What do you learn from Jesus’ surrender and the disciples’ weakness?'],
+ ['Mark 15','What does the cross reveal about sin and the love of God?'],
+ ['Mark 16','How should the resurrection change your courage and priorities?'],
+ ['Ephesians 1','What spiritual blessings are yours in Christ?'],
+ ['Ephesians 2','How does grace reshape your identity and your good works?'],
+ ['Ephesians 3','How might Christ’s love be deeper than you currently grasp?'],
+ ['Ephesians 4','What old pattern needs to be replaced by a new one?'],
+ ['Ephesians 5','What does walking in love and wisdom look like in your home?'],
+ ['Ephesians 6','Where do you need to stand firm in the strength of the Lord?'],
+ ['Philippians 1','How can your circumstances serve the advance of the gospel?'],
+ ['Philippians 2','Where can you practice the humility of Christ?'],
+ ['Philippians 3','What are you tempted to count as gain instead of knowing Christ?'],
+ ['Philippians 4','What anxiety can you bring to God in prayer?'],
+ ['2 Timothy 1','What gift or responsibility do you need to steward with courage?'],
+ ['2 Timothy 2','What does endurance look like in your present season?'],
+ ['2 Timothy 3','How should Scripture equip you for faithful living?'],
+ ['2 Timothy 4','What would it mean to finish your assignment faithfully?']
+];
+const phaseNames=['THE FOUNDATION','ABIDING IN CHRIST','SELF-CONTROL','KINGDOM IMPACT','PERSEVERANCE'];
+const phaseFocus=[
+ ['Start with faithfulness','Keep commitments small enough to repeat tomorrow. Build the foundation before increasing intensity.'],
+ ['Abide before you act','Create space to listen to God and depend on Christ before rushing into the day.'],
+ ['Practice wise self-control','Choose the next faithful action, especially when your feelings pull elsewhere.'],
+ ['Make discipline serve love','Let your habits make you more present, patient, and available to people.'],
+ ['Build what lasts','Keep the practices that are fruitful and sustainable beyond the 75 days.']
+];
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function today(){return iso(new Date())}
+function defaultData(){return {startDate:today(),name:'',checks:{},journals:{},reviews:{},readingDone:{}}}
+let data;
+try{data=JSON.parse(localStorage.getItem(KEY))||defaultData()}catch(e){data=defaultData()}
+function save(){localStorage.setItem(KEY,JSON.stringify(data))}
+function dateForDay(day){let d=new Date(data.startDate+'T12:00:00');d.setDate(d.getDate()+day-1);return iso(d)}
+function dayNum(){let a=new Date(data.startDate+'T00:00:00'),b=new Date(today()+'T00:00:00');return Math.max(1,Math.min(75,Math.floor((b-a)/86400000)+1))}
+function dayKey(){return today()}
+function phaseIndex(day){return Math.min(4,Math.floor((day-1)/15))}
+function checkObj(day=dayKey()){return data.checks[day]||{}}
+function scoreFor(date){let c=data.checks[date]||{};return commitments.filter((_,i)=>c[i]).length}
+function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2200)}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderChecklist(){let c=checkObj();document.getElementById('checklist').innerHTML=commitments.map((x,i)=>`<label class="item ${c[i]?'done':''}"><input class="check" type="checkbox" data-check="${i}" ${c[i]?'checked':''}><span><span class="itemtitle">${x[0]}</span><div class="itemdesc">${x[1]}</div><div class="itemdesc">${x[2]}</div></span></label>`).join('');document.querySelectorAll('[data-check]').forEach(el=>el.addEventListener('change',()=>{let o=checkObj();o[el.dataset.check]=el.checked;data.checks[dayKey()]=o;save();renderHome()}))}
+function renderHome(){let d=dayNum(),p=phaseIndex(d),s=scoreFor(dayKey()),j=Object.keys(data.journals).length;document.getElementById('phaseLabel').textContent=phaseNames[p];document.getElementById('dateLabel').textContent=`DAY ${d} / 75`;document.getElementById('dayNum').textContent=d;document.getElementById('percent').textContent=Math.round(s/7*100)+'%';document.getElementById('progressFill').style.width=(s/7*100)+'%';document.getElementById('daysDone').textContent=Object.keys(data.checks).filter(k=>scoreFor(k)>0).length;document.getElementById('score').textContent=s+'/7';document.getElementById('nextMilestone').textContent=d>=75?'✓':(Math.ceil(d/15)*15-d);document.getElementById('journalCount').textContent=j;document.getElementById('checkCount').textContent=s+' of 7';document.getElementById('focusDay').textContent='DAY '+d;document.getElementById('focusTitle').textContent=phaseFocus[p][0];document.getElementById('focusText').textContent=phaseFocus[p][1];let v=verses[(d-1)%verses.length];document.getElementById('verseText').textContent=v[0];document.getElementById('verseRef').textContent=v[1];document.getElementById('versePrompt').textContent=v[2];document.getElementById('greeting').innerHTML=(data.name?`Keep showing up,<br>${esc(data.name)}.`:'Become who<br>you were called to be.');renderChecklist()}
+function readingFor(d){return readings[(d-1)%readings.length]}
+function renderScripture(){let d=dayNum(),r=readingFor(d);document.getElementById('readingDay').textContent='Day '+d;document.getElementById('readingTitle').textContent=r[0];document.getElementById('readingPrompt').textContent=r[1];document.getElementById('readingDone').textContent=data.readingDone[dayKey()]?'✓ Reading marked complete':'✓ Mark reading complete';document.getElementById('phases').innerHTML=phaseNames.map((p,i)=>`<div class="phase"><div class="phase-num">${String(i*15+1).padStart(2,'0')}–${(i+1)*15}</div><div><h3>${p}</h3><div class="muted small">${phaseFocus[i][0]} — ${phaseFocus[i][1]}</div></div></div>`).join('')}
+function fillJournal(){let j=data.journals[dayKey()]||{};document.getElementById('journalDay').textContent='Day '+dayNum();document.getElementById('journalVerse').textContent=verses[(dayNum()-1)%verses.length][1];['godTaught','apply','gratitude','prayer'].forEach(id=>document.getElementById(id).value=j[id]||'');renderEntries()}
+function renderEntries(){let keys=Object.keys(data.journals).sort().reverse();document.getElementById('entriesLabel').textContent=keys.length+' saved';document.getElementById('entries').innerHTML=keys.length?keys.map(k=>{let j=data.journals[k];return `<details style="border-top:1px solid var(--line);padding:12px 0"><summary>${esc(k)} · ${esc(j.verse||'Reflection')}</summary>${[['Scripture',j.godTaught],['Application',j.apply],['Gratitude',j.gratitude],['Prayer',j.prayer]].filter(x=>x[1]).map(x=>`<div class="journalentry"><strong>${x[0]}</strong>\n${esc(x[1])}</div>`).join('')}<button class="btn ghost danger" style="margin-top:8px" data-delete-journal="${k}">Delete entry</button></details>`}).join(''):'<div class="empty">Your saved reflections will appear here.</div>';document.querySelectorAll('[data-delete-journal]').forEach(b=>b.onclick=()=>{if(confirm('Delete this journal entry?')){delete data.journals[b.dataset.deleteJournal];save();renderEntries();renderHome()}})}
+function fillReview(){let d=dayNum(),w=Math.min(11,Math.ceil(d/7)),start=(w-1)*7+1,end=Math.min(w*7,75),key='week'+w,r=data.reviews[key]||{};document.getElementById('weekLabel').textContent='Week '+w;document.getElementById('reviewRange').textContent=`Days ${start}–${end}`;['grace','wins','struggle','people','nextStep'].forEach(id=>document.getElementById(id).value=r[id]||'');let keys=Object.keys(data.reviews).sort((a,b)=>Number(b.replace('week',''))-Number(a.replace('week','')));document.getElementById('pastReviews').innerHTML=keys.length?keys.map(k=>{let x=data.reviews[k];return `<details style="border-top:1px solid var(--line);padding:12px 0"><summary>${k.replace('week','Week ')}</summary>${[['Grace',x.grace],['Wins',x.wins],['Challenges',x.struggle],['People',x.people],['Next step',x.nextStep]].filter(y=>y[1]).map(y=>`<div class="journalentry"><strong>${y[0]}</strong>\n${esc(y[1])}</div>`).join('')}</details>`}).join(''):'<div class="empty">Your weekly reviews will appear here.</div>'}
+function renderSettings(){document.getElementById('startDate').value=data.startDate;document.getElementById('displayName').value=data.name||''}
+function renderAll(){renderHome();renderScripture();fillJournal();fillReview();renderSettings()}
+function showTab(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===id));if(id==='journal')fillJournal();if(id==='review')fillReview();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
+document.getElementById('settingsBtn').onclick=()=>showTab('settings');
+document.getElementById('saveSettings').onclick=()=>{let d=document.getElementById('startDate').value;if(!d){toast('Choose a start date');return}data.startDate=d;data.name=document.getElementById('displayName').value.trim();save();renderAll();toast('Setup saved')};
+document.getElementById('readingDone').onclick=()=>{data.readingDone[dayKey()]=!data.readingDone[dayKey()];if(data.readingDone[dayKey()]){let c=checkObj();c[0]=true;data.checks[dayKey()]=c}save();renderAll();toast(data.readingDone[dayKey()]?'Reading marked complete':'Reading unmarked')};
+document.getElementById('openBible').onclick=()=>window.open('https://www.biblegateway.com/passage/?search='+encodeURIComponent(readingFor(dayNum())[0])+'&version=ESV','_blank','noopener');
+document.getElementById('saveJournal').onclick=()=>{let j={};['godTaught','apply','gratitude','prayer'].forEach(id=>j[id]=document.getElementById(id).value.trim());j.verse=verses[(dayNum()-1)%verses.length][1];j.day=dayNum();if(!Object.values(j).some(v=>typeof v==='string'&&v.trim())){toast('Write something before saving');return}data.journals[dayKey()]=j;save();renderEntries();renderHome();toast('Journal entry saved')};
+document.getElementById('clearJournal').onclick=()=>{if(confirm('Clear the current form?'))['godTaught','apply','gratitude','prayer'].forEach(id=>document.getElementById(id).value='')};
+document.getElementById('saveReview').onclick=()=>{let d=dayNum(),w=Math.min(11,Math.ceil(d/7)),r={};['grace','wins','struggle','people','nextStep'].forEach(id=>r[id]=document.getElementById(id).value.trim());r.savedAt=today();data.reviews['week'+w]=r;save();fillReview();toast('Weekly review saved')};
+document.getElementById('exportData').onclick=()=>{let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='refiner75-backup-'+today()+'.json';a.click();URL.revokeObjectURL(url);toast('Backup exported')};
+document.getElementById('importBtn').onclick=()=>document.getElementById('importFile').click();
+document.getElementById('importFile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let x=JSON.parse(await f.text());if(!x.startDate||!x.checks||!x.journals)throw new Error();if(confirm('Import this backup and replace current app data?')){data={...defaultData(),...x};save();renderAll();toast('Backup imported')}}catch(err){alert('That file does not look like a Refiner 75 backup.')}e.target.value=''};
+document.getElementById('resetBtn').onclick=()=>{if(confirm('This permanently clears your local checkmarks, journals, and reviews. Export a backup first if needed. Continue?')){data=defaultData();save();renderAll();toast('App data reset')}};
+renderAll();
+if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body>
+</html>
