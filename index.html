@@ -7,9 +7,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Refiner 75">
-<meta name="description" content="A Christ-centered 75-day discipline challenge.">
+<meta name="description" content="Pastoral formation for the long haul. Be formed before you lead.">
 <link rel="manifest" href="manifest.json">
-<title>REFINER 75 — Daily Discipline</title>
+<title>REFINERS-75 — Pastoral Formation</title>
 <style>
 :root{--bg:#111214;--panel:#1a1c20;--panel2:#22252a;--line:#34373e;--text:#f4f4f2;--muted:#a6a8af;--flame:#ff6a35;--flame2:#ff9c43;--good:#91d7a0;--radius:18px}
 *{box-sizing:border-box}html{background:var(--bg);color-scheme:dark}body{margin:0;background:radial-gradient(ellipse at top right,#2a1a15 0,transparent 36%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
@@ -24,54 +24,54 @@ h1{font-size:clamp(30px,8vw,42px);line-height:1.02;letter-spacing:-.04em;margin:
 <div class="toast" id="toast"></div>
 <main class="wrap">
 <header class="top">
- <div class="brand"><div class="mark">🔥</div><div><div class="eyebrow">75-DAY CHALLENGE</div><div class="brandname">REFINER <span style="color:var(--flame2)">75</span></div></div></div>
+ <div class="brand"><div class="mark">🔥</div><div><div class="eyebrow">PASTORAL FORMATION</div><div class="brandname">REFINERS<span style="color:var(--flame2)">-75</span></div></div></div>
  <button class="pill" id="settingsBtn">⚙ Setup</button>
 </header>
 
 <section class="view active" id="home">
  <div class="hero">
   <div class="herohead"><span class="daylabel" id="phaseLabel">THE FOUNDATION</span><span class="pill" id="dateLabel">DAY 1 / 75</span></div>
-  <h1 id="greeting">Become who<br>you were called to be.</h1>
-  <p class="muted" style="max-width:440px;margin:0">Faithfulness over perfection. Discipline rooted in grace. One day at a time.</p>
-  <div class="progressrow"><div><div class="small muted">CHALLENGE PROGRESS</div><div class="big"><span id="dayNum">1</span><span class="muted" style="font-size:18px"> / 75</span></div></div><div style="text-align:right"><div class="big" id="percent">0%</div><div class="small muted">today complete</div></div></div>
+  <h1 id="greeting">Be formed<br>before you lead.</h1>
+  <p class="muted" style="max-width:440px;margin:0">Pastoral formation for the long haul. Abide in Christ, grow in character, love your family, steward your health, and shepherd people faithfully.</p>
+  <div class="progressrow"><div><div class="small muted">YOUR FORMATION JOURNEY</div><div class="big"><span id="dayNum">1</span><span class="muted" style="font-size:18px"> / 75</span></div></div><div style="text-align:right"><div class="big" id="percent">0%</div><div class="small muted">today complete</div></div></div>
   <div class="track"><div class="fill" id="progressFill"></div></div>
  </div>
  <div class="grid">
-  <div class="stat"><div class="tag">Consistency</div><div class="number" id="daysDone">0</div><div class="label">days with progress</div></div>
+  <div class="stat"><div class="tag">Consistency</div><div class="number" id="daysDone">0</div><div class="label">days you showed up</div></div>
   <div class="stat"><div class="tag">Today</div><div class="number" id="score">0/7</div><div class="label">commitments complete</div></div>
   <div class="stat"><div class="tag">Milestone</div><div class="number" id="nextMilestone">15</div><div class="label">days to next phase</div></div>
   <div class="stat"><div class="tag">Journal</div><div class="number" id="journalCount">0</div><div class="label">entries saved</div></div>
  </div>
  <div class="card">
-  <div class="sectionhead"><div><div class="tag">Today's word</div><h2 style="margin-top:5px">Anchor your day</h2></div><span>✦</span></div>
+  <div class="sectionhead"><div><div class="tag">Abide</div><h2 style="margin-top:5px">Scripture before the demands</h2></div><span>✦</span></div>
   <div class="verse" id="verseText">“Discipline yourself for the purpose of godliness.”</div><div class="ref" id="verseRef">1 Timothy 4:7–8</div>
   <p class="muted small" id="versePrompt">What is one faithful step you can take in response to God's Word today?</p>
   <button class="btn ghost" onclick="showTab('journal')">Reflect in journal →</button>
  </div>
  <div class="card">
-  <div class="sectionhead"><div><div class="tag">Do the work</div><h2 style="margin-top:5px">Daily commitments</h2></div><span class="pill" id="checkCount">0 of 7</span></div>
+  <div class="sectionhead"><div><div class="tag">Five formation pillars</div><h2 style="margin-top:5px">Daily practices</h2></div><span class="pill" id="checkCount">0 of 7</span></div>
   <div id="checklist"></div>
-  <div class="notice" style="margin-top:12px">Your standing with God rests on Christ, not a perfect streak. If you miss a commitment, receive grace and return to faithfulness.</div>
+  <div class="notice" style="margin-top:12px">Your standing with God rests on Christ, not your productivity. These practices are means of formation, not a scorecard for your worth. When ministry gets demanding, receive grace and return to what matters.</div>
  </div>
  <div class="card">
-  <div class="sectionhead"><h2>Today's focus</h2><span class="tag" id="focusDay">DAY 1</span></div>
+  <div class="sectionhead"><h2>Today's formation focus</h2><span class="tag" id="focusDay">DAY 1</span></div>
   <h3 id="focusTitle">Start with faithfulness</h3><p class="muted" id="focusText">Keep the commitments small enough to repeat tomorrow. Build the foundation before increasing intensity.</p>
  </div>
  <div class="card" id="prioritiesCard">
-  <div class="sectionhead"><div><div class="tag">Plan with purpose</div><h2 style="margin-top:5px">Today's Priorities</h2></div><span class="pill" id="priorityCount">0 of 5</span></div>
+  <div class="sectionhead"><div><div class="tag">Steward your attention</div><h2 style="margin-top:5px">Today's Priorities</h2></div><span class="pill" id="priorityCount">0 of 5</span></div>
   <p class="muted small" style="margin-top:-5px">Write down the five most important things for today. Check each one off when it's done.</p>
   <div id="prioritiesList"></div>
  </div>
 </section>
 
 <section class="view" id="scripture">
- <div class="tag">Word before the world</div><h1>Scripture plan</h1><p class="muted">A 75-day reading journey through Mark, Ephesians, Philippians, and 2 Timothy, with reflection prompts.</p>
+ <div class="tag">Word before the world</div><h1>Scripture plan</h1><p class="muted">Read Scripture to know Christ and be shaped by His Word—not merely to prepare something for someone else.</p>
  <div class="card"><div class="sectionhead"><h2>Today's reading</h2><span class="pill" id="readingDay">Day 1</span></div><div class="verse" id="readingTitle">Mark 1</div><p id="readingPrompt" class="muted">Notice what Jesus says and does. What does this reveal about who He is?</p><div class="btnrow"><button class="btn primary" id="readingDone">✓ Mark reading complete</button><button class="btn" id="openBible">Open Bible online ↗</button></div><p class="small muted" style="margin-top:10px">Bible text opens on Bible Gateway. This app does not reproduce a copyrighted Bible translation.</p></div>
  <div class="card"><div class="sectionhead"><h2>Challenge phases</h2></div><div id="phases"></div></div>
 </section>
 
 <section class="view" id="journal">
- <div class="tag">Be still. Pay attention.</div><h1>Prayer & journal</h1><p class="muted">Bring your honest self before God. Entries are stored on this device.</p>
+ <div class="tag">Come honestly before God</div><h1>Prayer & journal</h1><p class="muted">A space for Scripture, obedience, gratitude, and prayer. Entries are stored in this browser, not in a secure cloud account.</p>
  <div class="card">
   <div class="sectionhead"><h2>Daily reflection</h2><span class="pill" id="journalDay">Day 1</span></div>
   <div class="small muted" id="journalVerse">1 Timothy 4:7–8</div>
@@ -85,22 +85,22 @@ h1{font-size:clamp(30px,8vw,42px);line-height:1.02;letter-spacing:-.04em;margin:
 </section>
 
 <section class="view" id="review">
- <div class="tag">Examine. Learn. Reset.</div><h1>Weekly review</h1><p class="muted">A short, honest review that helps you continue with wisdom—not shame.</p>
+ <div class="tag">Pastoral soul check</div><h1>Weekly review</h1><p class="muted">Take five honest minutes to review your walk with Christ, character, family presence, health, ministry boundaries, and rest. This is reflection, not diagnosis.</p>
  <div class="card">
   <div class="sectionhead"><h2>Review this week</h2><span class="pill" id="weekLabel">Week 1</span></div>
   <div class="small muted" id="reviewRange">Days 1–7</div>
-  <label class="field" for="grace">Where did I see God's grace this week?</label><textarea id="grace" placeholder="Remember specific moments..."></textarea>
-  <label class="field" for="wins">What went well? What commitments were consistent?</label><textarea id="wins" placeholder="Celebrate real progress..."></textarea>
-  <label class="field" for="struggle">What distracted me or tripped me up?</label><textarea id="struggle" placeholder="Be honest without beating yourself up..."></textarea>
-  <label class="field" for="people">How did my family and community experience my faith?</label><textarea id="people" placeholder="Where can I love people more intentionally?"></textarea>
-  <label class="field" for="nextStep">One adjustment for next week</label><textarea id="nextStep" placeholder="Choose one concrete change..."></textarea>
+  <label class="field" for="grace">Where did I notice God's grace this week?</label><textarea id="grace" placeholder="Remember specific moments..."></textarea>
+  <label class="field" for="wins">How was my walk with Christ? What spiritual practices were life-giving?</label><textarea id="wins" placeholder="Celebrate real progress..."></textarea>
+  <label class="field" for="struggle">Where did I notice temptation, exhaustion, resentment, or unhealthy patterns?</label><textarea id="struggle" placeholder="Be honest without beating yourself up..."></textarea>
+  <label class="field" for="people">How present was I with my family and the people I shepherd?</label><textarea id="people" placeholder="Where can I love people more intentionally?"></textarea>
+  <label class="field" for="nextStep">What boundary, act of rest, or practical change will help me lead faithfully next week?</label><textarea id="nextStep" placeholder="Choose one concrete change..."></textarea>
   <button class="btn primary full" id="saveReview" style="margin-top:12px">Save weekly review</button>
  </div>
  <div class="card"><h2>Past reviews</h2><div id="pastReviews"></div></div>
 </section>
 
 <section class="view" id="settings">
- <div class="tag">Make it yours</div><h1>Challenge setup</h1><p class="muted">Choose your start date and manage your personal data.</p>
+ <div class="tag">Make it yours</div><h1>Challenge setup</h1><p class="muted">Choose your start date and manage your personal data. The 75-day journey is a beginning, not a finish line.</p>
  <div class="card">
   <label class="field" for="startDate">Challenge start date</label><input type="date" id="startDate">
   <p class="small muted">Day count follows the calendar from your start date. You can change it if you need to reset your plan.</p>
@@ -109,11 +109,11 @@ h1{font-size:clamp(30px,8vw,42px);line-height:1.02;letter-spacing:-.04em;margin:
  </div>
  <div class="card"><h2>Your data</h2><p class="muted small">Your entries and checkmarks are saved locally in this browser. They are not uploaded to a server. Export a backup regularly, especially before changing devices or clearing Safari data.</p><div class="btnrow"><button class="btn" id="exportData">Export backup</button><button class="btn" id="importBtn">Import backup</button><input type="file" id="importFile" accept="application/json" class="hidden"></div><button class="btn ghost danger" id="resetBtn" style="margin-top:12px">Reset all app data</button></div>
  <div class="card"><h2>Challenge phases</h2>
-  <div class="phase"><div class="phase-num">01–15</div><div><h3>Foundation</h3><div class="muted small">Establish daily habits and learn consistency.</div></div></div>
-  <div class="phase"><div class="phase-num">16–30</div><div><h3>Abiding in Christ</h3><div class="muted small">Deepen prayer, Scripture, and attention.</div></div></div>
-  <div class="phase"><div class="phase-num">31–45</div><div><h3>Self-control</h3><div class="muted small">Practice wise limits and physical stewardship.</div></div></div>
-  <div class="phase"><div class="phase-num">46–60</div><div><h3>Kingdom impact</h3><div class="muted small">Invest in family, church, and neighbors.</div></div></div>
-  <div class="phase"><div class="phase-num">61–75</div><div><h3>Perseverance</h3><div class="muted small">Build a sustainable rule of life.</div></div></div>
+  <div class="phase"><div class="phase-num">01–15</div><div><h3>Abide in Christ</h3><div class="muted small">Establish sustainable rhythms of Scripture, prayer, and dependence on Jesus.</div></div></div>
+  <div class="phase"><div class="phase-num">16–30</div><div><h3>Character & integrity</h3><div class="muted small">Practice holiness, humility, truthfulness, and self-control.</div></div></div>
+  <div class="phase"><div class="phase-num">31–45</div><div><h3>Family & stewardship</h3><div class="muted small">Be present at home and steward your body, attention, and rest.</div></div></div>
+  <div class="phase"><div class="phase-num">46–60</div><div><h3>Shepherd faithfully</h3><div class="muted small">Serve people, equip others, and lead from love rather than pressure.</div></div></div>
+  <div class="phase"><div class="phase-num">61–75</div><div><h3>Rule of life</h3><div class="muted small">Build a sustainable rhythm for a lifetime of faithful ministry.</div></div></div>
  </div>
  <div class="notice">This is a personal-use prototype, not a secure cloud service. Anyone with access to this browser profile may be able to see local data.</div>
 </section>
@@ -128,13 +128,13 @@ h1{font-size:clamp(30px,8vw,42px);line-height:1.02;letter-spacing:-.04em;margin:
 <script>
 const KEY='refiner75_v1';
 const commitments=[
- ['Meet with God','Read Scripture for 15–20 minutes and pray for 10–15 minutes.','Psalm 1:1–3'],
- ['Journal','Write what God is teaching you, one application, and one prayer.','James 1:22'],
- ['Move your body','Complete 20–30 minutes of comfortable, appropriate movement.','1 Corinthians 6:19–20'],
- ['Practice stewardship','Follow your planned meals and make intentional food choices.','1 Corinthians 10:31'],
- ['Guard your attention','Avoid deliberately impure content and mindless scrolling that crowds out your priorities.','Psalm 101:3'],
- ['Invest in people','Intentionally encourage, serve, or connect with someone.','Galatians 6:10'],
- ['Review your day','Reflect, check tomorrow’s priorities, and ask God for help.','Psalm 139:23–24']
+ ['Abide in Christ','Read Scripture and pray before the day’s ministry demands. Come to Jesus as a disciple, not only as a pastor.','John 15:4–5'],
+ ['Form your inner life','Journal honestly, confess sin, and choose one concrete step of obedience.','Psalm 139:23–24'],
+ ['Love your family','Give your spouse, children, or a loved one intentional, undistracted attention.','1 Timothy 3:4–5'],
+ ['Steward your body','Move in a way appropriate for your health and make one wise choice about food, sleep, or recovery.','1 Corinthians 6:19–20'],
+ ['Guard your attention','Set a boundary around distraction, digital noise, or a habit that crowds out what matters.','Ephesians 5:15–16'],
+ ['Shepherd someone','Encourage, listen to, equip, or follow up with one person as an act of love—not to prove your worth.','1 Peter 5:2–3'],
+ ['Practice Sabbath-minded review','Review your day, name what can wait, and make room for prayer and genuine rest.','Mark 6:31']
 ];
 const verses=[
  ['“Discipline yourself for the purpose of godliness.”','1 Timothy 4:7–8','What is one faithful step you can take in response to God’s Word today?'],
@@ -180,13 +180,13 @@ const readings=[
  ['2 Timothy 3','How should Scripture equip you for faithful living?'],
  ['2 Timothy 4','What would it mean to finish your assignment faithfully?']
 ];
-const phaseNames=['THE FOUNDATION','ABIDING IN CHRIST','SELF-CONTROL','KINGDOM IMPACT','PERSEVERANCE'];
+const phaseNames=['ABIDE IN CHRIST','CHARACTER & INTEGRITY','FAMILY & STEWARDSHIP','SHEPHERD FAITHFULLY','A RULE OF LIFE'];
 const phaseFocus=[
- ['Start with faithfulness','Keep commitments small enough to repeat tomorrow. Build the foundation before increasing intensity.'],
- ['Abide before you act','Create space to listen to God and depend on Christ before rushing into the day.'],
- ['Practice wise self-control','Choose the next faithful action, especially when your feelings pull elsewhere.'],
- ['Make discipline serve love','Let your habits make you more present, patient, and available to people.'],
- ['Build what lasts','Keep the practices that are fruitful and sustainable beyond the 75 days.']
+ ['Abide before you act','Meet with Christ before the demands of ministry. Let Scripture shape you, not just your next sermon.'],
+ ['Practice integrity in private','Invite the Spirit to shape your motives, speech, habits, humility, and use of power.'],
+ ['Love your family and steward your life','Make room for undistracted presence, physical care, healthy limits, and real rest.'],
+ ['Shepherd from love, not pressure','Choose one concrete act of care, encouragement, equipping, or faithful leadership.'],
+ ['Build a rule of life that lasts','Keep the practices that help you abide in Christ and serve faithfully through changing seasons.']
 ];
 function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function today(){return iso(new Date())}
