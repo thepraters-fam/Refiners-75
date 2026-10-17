@@ -1,10 +1,10 @@
 {
   "name": "Refiner 75 \u2014 Christian Discipline Challenge",
-  "short_name": "Refiner 75",
+  "short_name": "Refiners-75",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#111214",
   "theme_color": "#111214",
-  "description": "A Christ-centered 75-day discipline challenge.",
+  "description": "Pastoral formation for the long haul. Be formed before you lead.",
   "icons": []
 }
